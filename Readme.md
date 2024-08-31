@@ -1,4 +1,16 @@
-# gpt-commit-summarizer
+# jektvik/gpt-commit-summarizer
+## This is a revived fork of the original repo which expired due to lack of maintenance
+All installation steps mentioned below are still valid but to use this fork make sure to update the referenced action under steps:
+- uses: jektvik/gpt-commit-summarizer@master
+
+Updates in fork:
+- OpenAi package updated along with all invokations thereof
+- Migrated from completion to chat api
+- Model updated from text-davinci-003 to gpt-3.5-turbo
+
+I intend to keep the fork alive in case of further deprecations, unless the author revives the original repo
+
+# ORIGINAL README BELOW
 
 See [announcement blogpost](https://medium.com/@knaan.harpaz/leverage-openais-language-model-for-automated-commit-summaries-8181cef30375?source=friends_link&sk=b71a6799548f52274d2d0888e9bfd97e).
 
@@ -8,7 +20,7 @@ Don't have time and want to get hacking right away? Check out the [Getting Start
 * [Troubleshooting](#troubleshooting)
 * [Encountered any bugs?](#encountered-any-bugs)
 
-The `gpt-commit-summarizer` GitHub Action is a powerful tool that harnesses the capabilities of OpenAI's state-of-the-art text-davinci-003 large language model to provide summaries of the changes introduced by a pull request in a repository. By generating the git diff for each commit and for each modified file and sending it to the OpenAI API with a carefully crafted prompt, the action is able to produce concise and informative summaries that can greatly enhance collaboration and understanding in large codebases.
+The `gpt-commit-summarizer` GitHub Action is a powerful tool that harnesses the capabilities of OpenAI's state-of-the-art ~~text-davinci-003~~ large language model to provide summaries of the changes introduced by a pull request in a repository. By generating the git diff for each commit and for each modified file and sending it to the OpenAI API with a carefully crafted prompt, the action is able to produce concise and informative summaries that can greatly enhance collaboration and understanding in large codebases.
 
 The action then performs a higher level call to the OpenAI API to generate a summary of the entire pull request, from the summaries of individual commits and file differences. This summary is then posted as a comment on the pull request.
 
