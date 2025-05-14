@@ -6,7 +6,7 @@ import {
   TEMPERATURE,
 } from "./openAi";
 
-const OPEN_AI_PROMPT = `You are an expert programmer, and you are trying to summarize a pull request.
+const OPEN_AI_PROMPT = `You are a Moodle expert programmer, and you are trying to summarize a pull request.
 You went over every commit that is part of the pull request and over every file that was changed in it.
 For some of these, there was an error in the commit summary, or in the files diff summary.
 Please summarize the pull request. Write your response in bullet points, starting each bullet point with a \`*\`.
